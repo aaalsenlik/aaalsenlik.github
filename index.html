@@ -2,7 +2,7 @@
 <html>
 <title>AAAL MD ŞENLİK</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,6 +16,7 @@
 <body>
 
 <!-- Navbar -->
+    
 <ul class="w3-navbar w3-black w3-card-2 w3-left-align">
         <li class="w3-hide-medium w3-hide-large w3-opennav w3-right w3-panel w3-display-middle">
             <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
@@ -89,7 +90,7 @@
             .
         </p>
         <iframe width="854" height="480" src="https://www.youtube.com/embed/Y1blpKT1RkY" frameborder="0" allowfullscreen></iframe>
-        <iframe width="854" height="480" src="https://www.youtube.com/embed/_2Pi4DsaSck" frameborder="0" allowfullscreen></iframe>
+        <iframe width="854" height="height/3" src="https://www.youtube.com/embed/_2Pi4DsaSck" frameborder="0" allowfullscreen></iframe>
         <iframe width="854" height="480" src="https://www.youtube.com/embed/frwpO2eTlrs" frameborder="0" allowfullscreen></iframe>
         <a class="twitter-timeline" data-width="960" data-height="854" href="https://twitter.com/aaalmdsenlik">Tweets by aaalmdsenlik</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     
@@ -129,6 +130,7 @@
         // Fotoğraf Scripti
         var myIndex = 0;
         carousel();
+        ekran();
 
         function carousel() {
             var i;
@@ -141,7 +143,15 @@
             x[myIndex-1].style.display = "block";
             setTimeout(carousel, 4000);
         }
-
+      function ekran()
+{
+    var wh = $(window).height();
+    $('body').attr('style', 'height:' + wh + 'px;');
+}
+$(document).ready(function() {
+    set_body_height();
+    $(window).bind('resize', function() { set_body_height(); });
+});
     </script>
 
 </body>
