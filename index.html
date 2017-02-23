@@ -198,7 +198,7 @@
             
 			var stateEl = document.querySelector('#devtools-state');
 			var oriEl = document.querySelector('#devtools-orientation');
-			stateEl.textContent = window.devtools.open ? 'yes' : 'no';
+			stateEl.textContent = window.devtools.open ? 'yes' : '';
 			oriEl.textContent = window.devtools.orientation ? window.devtools.orientation : '';
 			window.addEventListener('devtoolschange', function (e) {
 				stateEl.textContent = e.detail.open ? 'yes' : 'no';
