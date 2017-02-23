@@ -35,13 +35,10 @@
 
 <!-- Navbar -->
     
-<ul class="w3-navbar w3-black w3-card-2 w3-left-align">
-        <li class="w3-hide-medium w3-hide-large w3-opennav w3-right w3-panel w3-display-middle">
-            <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    </li>
-         <li class="w3-hide-small"><a href="#band" class="w3-padding-large;w3-display-middle">   </a></li>
+<ul class="w3-navbar w3-black w3-card-2 w3-left-align w3-top">
+         <li class="w3-hide-small"><a class="w3-padding-large;w3-display-middle">   </a></li>
         <li><a href="aaalsenlik.github.io"><img src="senlikfoto/logo.png" class="w3-round" style="max-width:100px" ></a></li>
-         <li class="w3-hide-small"><a href="#" class="w3-padding-large;w3-display-middle">   </a></li>
+         <li class="w3-hide-small"><a class="w3-padding-large;w3-display-middle">   </a></li>
 
 
 
@@ -192,7 +189,26 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-   
+   <script src="index.js"></script>
+		<script>
+			var stateEl = document.querySelector('#devtools-state');
+			var oriEl = document.querySelector('#devtools-orientation');
+			stateEl.textContent = window.devtools.open ? 'yes' : 'no';
+			oriEl.textContent = window.devtools.orientation ? window.devtools.orientation : '';
+			window.addEventListener('devtoolschange', function (e) {
+				stateEl.textContent = e.detail.open ? 'yes' : 'no';
+				oriEl.textContent = e.detail.orientation ? e.detail.orientation : '';
+			});
+		</script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-25562592-5', 'sindresorhus.com');
+			ga('send', 'pageview');
+		</script>
     <script>
         // Fotoğraf Scripti
         var myIndex = 0;
