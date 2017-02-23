@@ -198,10 +198,10 @@
             
 			var stateEl = document.querySelector('#devtools-state');
 			var oriEl = document.querySelector('#devtools-orientation');
-			stateEl.textContent = window.devtools.open ? 'yes' : '';
+			stateEl.textContent = window.devtools.open ? 'Konsolu kapatır mısın? :)' : '';
 			oriEl.textContent = window.devtools.orientation ? window.devtools.orientation : '';
 			window.addEventListener('devtoolschange', function (e) {
-				stateEl.textContent = e.detail.open ? 'yes' : '';
+				stateEl.textContent = e.detail.open ? 'Konsolu kapatır mısın? :)' : '';
 				oriEl.textContent = e.detail.orientation ? e.detail.orientation : '';
 			});
 		</script>
