@@ -197,11 +197,11 @@
             
 			var stateEl = document.querySelector('#devtools-state');
 			var oriEl = document.querySelector('#devtools-orientation');
-			stateEl.textContent = window.devtools.open ? 'Konsolu Kapat!' : '';
+			stateEl.textContent = window.devtools.open ? 'yes' : 'no';
            
 			oriEl.textContent = window.devtools.orientation ? window.devtools.orientation : '';
 			window.addEventListener('devtoolschange', function (e) {
-				stateEl.textContent = e.detail.open ? 'Konsolu Kapat!' : '';
+				stateEl.textContent = e.detail.open ? 'yes' : 'no';
 				oriEl.textContent = e.detail.orientation ? e.detail.orientation : '';
                 document.getElementsByTagName("body")[0].style;
               
