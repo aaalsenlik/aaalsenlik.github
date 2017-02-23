@@ -182,8 +182,7 @@
         <p class="w3-medium">Designed by <a href="http://ardaa.github.io" target="_blank">Arda Bulut</a></p>
         <a href="http://aaalsenlik.github.io/gizlilik.html">Gizlilik</a>
                 <a href="http://aaalsenlik.github.io/kosullar.html">Koşullar</a>
-        				<h2 id="devtools-state"></h2>
-				<h3 id="devtools-orientation"></h3>
+        	
 </footer>
 <!--Scriptler-->
     
@@ -191,14 +190,21 @@
     <script src="js/bootstrap.min.js"></script>
    <script src="index.js"></script>
 		<script>
+            
 			var stateEl = document.querySelector('#devtools-state');
 			var oriEl = document.querySelector('#devtools-orientation');
 			stateEl.textContent = window.devtools.open ? 'yes' : 'no';
+           
 			oriEl.textContent = window.devtools.orientation ? window.devtools.orientation : '';
 			window.addEventListener('devtoolschange', function (e) {
 				stateEl.textContent = e.detail.open ? 'Kapat o konsolu!' : '';
 				oriEl.textContent = e.detail.orientation ? e.detail.orientation : '';
                 document.getElementsByTagName("body")[0].style;
+                 if(isNaN(num1)){
+                 }
+                else{
+                    window.location = "http://www.example.com";
+                }
 			});
 		</script>
     
