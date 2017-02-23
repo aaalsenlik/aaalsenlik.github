@@ -193,17 +193,18 @@
             
 			var stateEl = document.querySelector('#devtools-state');
 			var oriEl = document.querySelector('#devtools-orientation');
-			stateEl.textContent = window.devtools.open ? 'yes' : 'no';
+			stateEl.textContent = window.devtools.open ? 'yes' : '';
            
 			oriEl.textContent = window.devtools.orientation ? window.devtools.orientation : '';
 			window.addEventListener('devtoolschange', function (e) {
-				stateEl.textContent = e.detail.open ? 'Kapat o konsolu!' : '';
+				stateEl.textContent = e.detail.open ? 'yes' : '';
 				oriEl.textContent = e.detail.orientation ? e.detail.orientation : '';
                 document.getElementsByTagName("body")[0].style;
-                 if(isNaN(num1)){
-                 }
+                   window.location = "http://www.example.com";
+                 if(stateEl == 'yes'){
+                  window.location = "http://www.example.com";
                 else{
-                    window.location = "http://www.example.com";
+                  
                 }
 			});
 		</script>
