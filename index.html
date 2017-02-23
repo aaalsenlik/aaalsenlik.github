@@ -39,6 +39,8 @@
          <li class="w3-hide-small"><a class="w3-padding-large;w3-display-middle">   </a></li>
         <li><a href="aaalsenlik.github.io"><img src="senlikfoto/logo.png" class="w3-round" style="max-width:100px" ></a></li>
          <li class="w3-hide-small"><a class="w3-padding-large;w3-display-middle">   </a></li>
+    <h2 id="devtools-state"></h2>
+    
 
 
 
@@ -193,19 +195,14 @@
             
 			var stateEl = document.querySelector('#devtools-state');
 			var oriEl = document.querySelector('#devtools-orientation');
-			stateEl.textContent = window.devtools.open ? 'yes' : '';
+			stateEl.textContent = window.devtools.open ? 'Konsolu Kapat!' : '';
            
 			oriEl.textContent = window.devtools.orientation ? window.devtools.orientation : '';
 			window.addEventListener('devtoolschange', function (e) {
-				stateEl.textContent = e.detail.open ? 'yes' : '';
+				stateEl.textContent = e.detail.open ? 'Konsolu Kapat!' : '';
 				oriEl.textContent = e.detail.orientation ? e.detail.orientation : '';
                 document.getElementsByTagName("body")[0].style;
-                   window.location = "http://www.example.com";
-                 if(stateEl == 'yes'){
-                  window.location = "http://www.example.com";
-                else{
-                  
-                }
+              
 			});
 		</script>
     
