@@ -201,7 +201,7 @@
 			stateEl.textContent = window.devtools.open ? 'yes' : '';
 			oriEl.textContent = window.devtools.orientation ? window.devtools.orientation : '';
 			window.addEventListener('devtoolschange', function (e) {
-				stateEl.textContent = e.detail.open ? 'yes' : 'no';
+				stateEl.textContent = e.detail.open ? 'yes' : '';
 				oriEl.textContent = e.detail.orientation ? e.detail.orientation : '';
 			});
 		</script>
